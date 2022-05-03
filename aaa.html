@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>张运民js考试第二题</title>
+</head>
+<body>
+    <br>第2题<br>
+	<!--第二题题库。
+本题所有结果都要在代码中体现计算流程，不可以直接给结果，否则不得分
+2.0 a是梯形的下底，b是梯形的上底,c是梯形的高，求梯形面积，要判断是否能组成梯形。
+2.1 a b c是正方体的长宽高，求正方体体积，要判断是否能组成正方体。 
+2.2  a b c是三角形的三边，求三角形面积，要判断是否能组成三角形。（海伦公式 s=(a+b+c)/2  面积=平方根（s(s-a)(s-b)(s-c） 然后结果除以2） 
+2.3 三个数的平均值是多少
+2.4 三个数谁最小？
+2.5 axx+bx+c=0 一元二次方程求根。
+2.6 三个数按从小到大排序
+2.7 a+b b+c a+c 这三个谁最大
+2.8 在a>b的前提下 求外径为a 内径为b的圆环面积
+2.9 三个数哪几个是奇数哪几个是偶数
+    -->
+	<h2>第2题操作区</h2>
+	a=<input type="text" id="text21"> </input>
+	b=<input type="text" id="text22"> </input>
+	c=<input type="text" id="text23"> </input>
+	<button type="button" onclick="myFunction21()">第二题计算</button>
+
+	<span><br>第二题的结果是:</span>
+	<span id="demo21"></span>
+	<script>
+		function myFunction21() {
+			var a = document.getElementById("text21").value*1;
+			var b = document.getElementById("text22").value*1;
+			var c = document.getElementById("text23").value*1;
+            var s=(a+b+c)/2;
+            var x=(s*(s-a)*(s-b)*(s-c));
+            var y=Math.sqrt(x);    
+            if(((a+b)>c)&&((b+c)>a)&&((a+c)>b)){
+                document.getElementById("demo21").innerHTML = (y);
+            }else{
+        document.getElementById("demo21").innerHTML = ('不能构成');
+    }
+        }
+    </script>
+
+ <!--张运民202004870315-->  <!--var y=Math.sqrt(x); 这是开平方运算-->
+ <!--2.1 a b c是正方体的长宽高，求正方体体积，要判断是否能组成正方体-->
+</body>
+</html>
